@@ -1,0 +1,35 @@
+
+main{
+    padding: 10px;
+}
+
+.topProfileHolder{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.topProfileHolder h1{
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    // color: #0087FF ;
+}
+
+.topProfileHolder p{
+    margin: 0px;
+    padding: 0px;
+    color: grey ;
+}
+
+.searchBar{
+    padding: 0px;
+    margin: 20px 0px;
+}
+
+main ::ng-deep .searchbar-input{
+    border-radius: 20px;
+}
