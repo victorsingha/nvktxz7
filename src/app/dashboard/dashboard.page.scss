@@ -1,9 +1,13 @@
-
-main{
+main {
     padding: 10px;
 }
 
-.topProfileHolder{
+p,
+h1 {
+    margin: 0px;
+}
+
+.topProfileHolder {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -12,24 +16,100 @@ main{
     text-align: center;
 }
 
-.topProfileHolder h1{
+.topProfileHolder h1 {
     font-weight: bold;
     margin: 0px;
     padding: 0px;
     // color: #0087FF ;
 }
 
-.topProfileHolder p{
-    margin: 0px;
-    padding: 0px;
-    color: grey ;
+.topProfileHolder p {
+    color: grey;
 }
 
-.searchBar{
-    padding: 0px;
-    margin: 20px 0px;
-}
 
-main ::ng-deep .searchbar-input{
+main ::ng-deep .searchbar-input {
     border-radius: 20px;
+}
+
+.cardHolder {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.customCard {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    // background: #0087FF;
+    background: aliceblue;
+    // background: linear-gradient(45deg,#79bbf5,#0087FF);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.customCard ion-icon {
+    font-size: 30px;
+}
+
+.quoteCard {
+    display: flex;
+    flex-direction: column;
+    background: aliceblue;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.quoteCard ion-icon {
+    font-size: 30px;
+}
+
+.primaryBtn {
+    background: #0087FF;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    background: #56CCF2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F80ED, #56CCF2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.secondaryBtn {
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: black;
+    background: white;
+}
+
+.policyCard {
+    display: flex;
+    flex-direction: column;
+    background: aliceblue;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background: #E0EAFC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.policyCard ion-icon {
+    font-size: 30px;
 }

@@ -11,7 +11,6 @@
     <section style="margin-bottom: 20px;display: flex;justify-content: space-between;">
       <button>Feedback</button>
       <button>Logout</button>
-
     </section>
 
     <section class="topProfileHolder">
@@ -22,10 +21,94 @@
         <h1>Hello, John Doe</h1>
         <p>Have a nice day!</p>
       </section>
-     
     </section>
 
-    <!-- <ion-searchbar class="searchBar"></ion-searchbar> -->
+    <section class="cardHolder">
+      <div class="customCard">
+        <ion-icon name="car-sport"></ion-icon>
+        <p style="font-size: 20px;font-weight:bold;">Motor Quote</p>
+        <p style="font-style: italic;color:grey;">There are many variations of passages of Lorem Ipsum available</p>
+      </div>
+      <div class="customCard ">
+        <ion-icon name="paper-plane"></ion-icon>
+        <p style="font-size: 20px;font-weight:bold;">Travel Quote</p>
+        <p style="font-style: italic;color:grey;">There are many variations of passages of Lorem Ipsum available</p>
+      </div>
+      <div class="customCard">
+        <ion-icon name="heart-half"></ion-icon>
+        <p style="font-size: 20px;font-weight:bold;">Medical Quote</p>
+        <p style="font-style: italic;color:grey;">There are many variations of passages of Lorem Ipsum available</p>
+      </div>
+      <div class="customCard">
+        <ion-icon name="pulse"></ion-icon>
+        <p style="font-size: 20px;font-weight:bold;">Medmal Quote</p>
+        <p style="font-style: italic;color:grey;">There are many variations of passages of Lorem Ipsum available</p>
+      </div>
+      <div class="customCard">
+        <ion-icon name="boat"></ion-icon>
+        <p style="font-size: 20px;font-weight:bold;">Marine Quote</p>
+        <p style="font-style: italic;color:grey;">There are many variations of passages of Lorem Ipsum available</p>
+      </div>
+    </section>
+
+
+    <section class="quoteHolder">
+      <h1 style="margin-top: 20px;">Your Proposals</h1>
+      <p style="font-style: italic;color:grey;margin-bottom: 20px;">Proposals are valid for 24hrs. Expired Proposals are not shown in the list.</p>
+
+      <div class="quoteCard" *ngFor="let obj of [1,1,1]">
+        <div style="display: flex;justify-content:space-between;align-items: center;">
+          <div style="display: flex;align-items: center; gap: 10px;">
+            <ion-icon name="pulse"></ion-icon>
+            <p style="font-size: 20px;font-weight:bold;">Medmal Quote</p>
+          </div>
+          <div style="display: flex;align-items: center;">
+            <p style="font-weight:bold;">Download</p>
+            <ion-icon name="download"></ion-icon>
+          </div>
+        </div>
+        <div style="display: flex;justify-content:space-between;">
+          <h1 style="font-size: 30px;">43</h1>
+          <h1 style="font-size: 60px;font-weight: bold;">$304.67</h1>
+        </div>
+        <div style="display: flex;justify-content: space-between; gap: 10px;">
+          <button class="secondaryBtn">Cancel</button>
+          <button class="primaryBtn">Buy Now</button>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="quoteHolder">
+      <h1 style="margin-top: 20px;">Your Policies</h1>
+      <p style="font-style: italic;color:grey;margin-bottom: 20px;">Here is the list of policy you have with us. We appreciate you holding policies with us.</p>
+
+      <div class="policyCard" *ngFor="let obj of [1,1]">
+        <div style="display: flex;justify-content:space-between;align-items: center;">
+          <div style="display: flex;align-items: center; gap: 10px;">
+            <ion-icon name="heart-half"></ion-icon>
+            <p style="font-size: 20px;font-weight:bold;">Medical Policy</p>
+          </div>
+          <div style="display: flex;align-items: center;">
+            <p style="font-weight:bold;">Download</p>
+            <ion-icon name="download"></ion-icon>
+          </div>
+        </div>
+        <div style="display: flex;flex-direction: column;gap: 10px;">
+          <h1 style="font-size: 20px;display: flex;align-items: center;gap: 10px;"><ion-icon name="checkmark-circle"></ion-icon>12-PCO-263543-00-2002</h1>
+          <p>Valid through</p>
+          <h1 style="font-size: 30px;font-weight: bold;">24/05/2021 - 24/05/2023</h1>
+          <p>Remaining Days</p>
+          <h1 style="font-size: 30px;font-weight: bold;">478 days</h1>
+        </div>
+        <div style="display: flex;justify-content: space-between; gap: 10px;">
+          <button class="secondaryBtn">Endorsement</button>
+          <button class="primaryBtn">Renew Policy</button>
+        </div>
+      </div>
+
+    </section>
+
 
 
   </main>
