@@ -6,7 +6,7 @@
         <form class="loginForm" #loginForm="ngForm">
             <section class="inputHolder">
                 <label>Email</label>
-                <input class="customInput" type="text" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" placeholder="johhdoe@xyz.com" required name="email_" [(ngModel)]="email" #email_="ngModel">
+                <input class="customInput" autocomplete="off" type="text" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" placeholder="johhdoe@xyz.com" required name="email_" [(ngModel)]="email" #email_="ngModel">
                 <!-- <div class="errorMsg" *ngIf="!email_?.valid && (email_?.dirty || email_?.touched)">
                     Invalid Email
                  </div> -->
