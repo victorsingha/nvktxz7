@@ -8,12 +8,16 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
+  public email="";
+  public password="";
+
   constructor(private route:Router) { }
 
   ngOnInit() {
   }
 
-  login(){
-    this.route.navigate(['/dashboard']);
+  login(event:any){
+    console.log(event)
+    // this.route.navigate(['/dashboard']);
   }
 }

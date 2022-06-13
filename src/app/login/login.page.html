@@ -1,5 +1,30 @@
 
 
 <ion-content>
-    <button (click)="login()">Login</button>
+    <main>
+        <img src="https://fontmeme.com/permalink/220613/24e56598c43b19507834a1ea0f864e10.png" alt="">
+        <form class="loginForm" #loginForm="ngForm">
+            <section class="inputHolder">
+                <label>Email</label>
+                <input class="customInput" type="text" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" placeholder="johhdoe@xyz.com" required name="email_" [(ngModel)]="email" #email_="ngModel">
+                <!-- <div class="errorMsg" *ngIf="!email_?.valid && (email_?.dirty || email_?.touched)">
+                    Invalid Email
+                 </div> -->
+            </section>
+            <section class="inputHolder">
+                <label>Password</label>
+                <input class="customInput" type="password" required minlength="5" placeholder="*******"  name="password_" [(ngModel)]="password" #password_="ngModel">
+                <!-- <div class="errorMsg" *ngIf="!password_?.valid && (password_?.dirty || password_?.touched)">
+                    Invalid Password
+                 </div> -->
+            </section>
+          
+            <button class="loginBtn" [disabled]="!loginForm.invalid" (click)="login(loginForm)">Login</button>
+        </form>
+    </main>
+
+
+  
+
+
 </ion-content>
