@@ -10,7 +10,7 @@ main{
     height: 100vh;
 }
 
-.loginForm{
+.LoginForm{
     display: flex;
     flex-direction: column;
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
@@ -18,37 +18,58 @@ main{
     border-radius: 20px;
     gap: 10px;
 }
-.inputHolder{
+.InputHolder{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
 
-.customInput{
+.CustomInput{
     width: 190px;
     border: none;
     height: 35px;
     padding: 5px;
 }
 
-.customInput:focus{
-    // outline: none;
+.CustomInput:focus{
     outline-color: #ffcdd2;
-    // background: #ffcdd2;
-    // color: black;
 }
 
-.loginBtn{
+.LoginBtn{
     background: #1b1f23;
     color: white;
-    // font-weight: bold;
     height: 30px;
     border-radius: 10px;
 }
-.loginBtn:focus{
+button:focus{
     outline: none;
 }
-.loginBtn:hover{
+.LoginBtn:hover{
     background: linear-gradient(180deg,#464b4f,#1b1f23);
+}
+
+.LoginBtn[disabled]{
+    background:#464b4f;
+}
+
+.ForgotPassword{
+    margin: 0px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.CreateAccount{
+    margin: 0px;
+    text-align: center;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.CreateAccount:hover{
+    color: #ffcdd2;
 }

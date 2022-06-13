@@ -1,30 +1,30 @@
-
-
 <ion-content>
     <main>
         <img src="https://fontmeme.com/permalink/220613/24e56598c43b19507834a1ea0f864e10.png" alt="">
-        <form class="loginForm" #loginForm="ngForm">
-            <section class="inputHolder">
+        <form class="LoginForm" #loginForm="ngForm">
+            <section class="InputHolder">
                 <label>Email</label>
-                <input class="customInput" autocomplete="off" type="text" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" placeholder="johhdoe@xyz.com" required name="email_" [(ngModel)]="email" #email_="ngModel">
+                <input class="CustomInput" autocomplete="off" type="text" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" placeholder="johndoe@xyz.com" required name="email_" [(ngModel)]="email" #email_="ngModel">
                 <!-- <div class="errorMsg" *ngIf="!email_?.valid && (email_?.dirty || email_?.touched)">
                     Invalid Email
                  </div> -->
             </section>
-            <section class="inputHolder">
+            <section class="InputHolder">
                 <label>Password</label>
-                <input class="customInput" type="password" required minlength="5" placeholder="*******"  name="password_" [(ngModel)]="password" #password_="ngModel">
+                <input class="CustomInput" type="password" required minlength="5" placeholder="*******" name="password_" [(ngModel)]="password" #password_="ngModel">
                 <!-- <div class="errorMsg" *ngIf="!password_?.valid && (password_?.dirty || password_?.touched)">
                     Invalid Password
                  </div> -->
             </section>
-          
-            <button class="loginBtn" [disabled]="!loginForm.invalid" (click)="login(loginForm)">Login</button>
+
+            <section class="InputHolder">
+                <button class="LoginBtn" [disabled]="loginForm.invalid" (click)="login(loginForm)">Login</button>
+                <p class="ForgotPassword">Get help logging in.</p>
+                <p class="CreateAccount"><span style="font-size: 12px;color: grey;">New Otaku?</span> Create Account</p>
+            </section>
+
         </form>
     </main>
-
-
-  
 
 
 </ion-content>
