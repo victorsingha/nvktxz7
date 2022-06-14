@@ -1,13 +1,13 @@
 <ion-content>
     <main>
-        <p style="position: absolute;top: 0;right: 0;margin: 10px;">Early Access</p>
+        <p style="position: absolute;top: 0;right: 0;margin: 10px;color: lightgray;">Early Access</p>
         <!-- <img src="https://fontmeme.com/permalink/220613/24e56598c43b19507834a1ea0f864e10.png" alt=""> -->
         <img src="https://wallpapercrafter.com/th800/113164-anime-Naruto-Shippuuden-eyes-minimalism-simple-background-white-background-white-red-purple.png" alt="">
         <img class="LoginImg" src="https://cdn.wallpapersafari.com/30/20/HpMvn6.jpg" alt="">
         <form *ngIf="pageType == 'Login'" class="LoginForm" #loginForm="ngForm">
             <section class="InputHolder">
                 <label>Email</label>
-                <input class="CustomInput" autocomplete="off" type="text" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" placeholder="johndoe@xyz.com" required name="email_" [(ngModel)]="email" #email_="ngModel">
+                <input class="CustomInput" type="text" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" placeholder="johndoe@xyz.com" required name="email_" [(ngModel)]="email" #email_="ngModel">
                 <!-- <div class="errorMsg" *ngIf="!email_?.valid && (email_?.dirty || email_?.touched)">
                     Invalid Email
                  </div> -->
@@ -30,7 +30,7 @@
         <form *ngIf="pageType == 'Register'" class="LoginForm" #registerForm="ngForm">
             <section class="InputHolder">
                 <label>Email</label>
-                <input class="CustomInput" autocomplete="off" type="text" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" placeholder="johndoe@xyz.com" required name="newEmail_" [(ngModel)]="newEmail" #newEmail_="ngModel">
+                <input class="CustomInput" type="text" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" placeholder="johndoe@xyz.com" required name="newEmail_" [(ngModel)]="newEmail" #newEmail_="ngModel">
             </section>
             <section class="InputHolder">
                 <label>New Password</label>
