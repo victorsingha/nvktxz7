@@ -33,7 +33,6 @@ main{
     border: none;
     height: 35px;
     padding: 5px;
-    border-radius: 10px;
 }
 
 .CustomInput:focus{
@@ -64,6 +63,7 @@ button:focus{
     font-weight: bold;
     margin-top: 10px;
     cursor: pointer;
+    text-decoration: line-through;
 }
 
 .CreateAccount{

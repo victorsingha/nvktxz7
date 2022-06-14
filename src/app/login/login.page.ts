@@ -22,15 +22,22 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  login(event:any){
-    console.log(event)
-    // this.route.navigate(['/dashboard']);
+  login(loginForm:any){
+    if(loginForm.form.status == "INVALID"){
+      console.log("Invalid")
+    }else{
+      this.route.navigate(['/dashboard']);
+    }
+    console.log(loginForm)
   }
 
   openCreateAccount(){
+    this.newPassword = "";
+    this.confirmPassword = "";
     this.pageType = "Register"
   }
   openLogin(){
+    this.password = "";
     this.pageType = "Login"
   }
 }
