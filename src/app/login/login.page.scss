@@ -4,10 +4,12 @@
 
 main{
     display: flex;
-    justify-content: space-evenly;
+    // justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    gap: 50px;
+    padding: 20px;
 }
 
 .LoginForm{
@@ -17,6 +19,7 @@ main{
     padding: 20px;
     border-radius: 20px;
     gap: 10px;
+    width: 290px;
 }
 .InputHolder{
     display: flex;
@@ -26,7 +29,6 @@ main{
 
 
 .CustomInput{
-    width: 190px;
     border: none;
     height: 35px;
     padding: 5px;
@@ -64,12 +66,19 @@ button:focus{
 
 .CreateAccount{
     margin: 0px;
-    text-align: center;
     display: flex;
     align-items: baseline;
     gap: 5px;
+    justify-content: center;
 }
 
 .CreateAccount:hover{
     color: #ffcdd2;
+}
+
+.LoginImg{
+    width: 90%;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
 }
