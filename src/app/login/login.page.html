@@ -1,6 +1,10 @@
 <ion-content>
+    <section *ngIf="showError" class="errorSection">
+        <p class="errorMessage">{{errorMessage}}</p>
+        <p class="errorMessage">x</p>
+    </section>
     <main>
-        <p style="color: lightgray;">Early Access</p>
+        <p style="color: lightgray;margin: 0px;">Early Access</p>
         <h3 class="FiraSans" style="margin: 0px;font-size:30px;transform: translateY(15px);">Welcome to</h3>
         <h1 class="FiraSans Logo" style="margin: 0px;font-size:110px;">Yyke!</h1>
         <form *ngIf="pageType == 'Login'" class="LoginForm" #loginForm="ngForm">
@@ -20,7 +24,13 @@
             </section>
 
             <section class="InputHolder">
-                <button class="LoginBtn" [disabled]="loginForm.invalid" (click)="login(loginForm)">Login</button>
+                <button *ngIf="!showLoading" class="LoginBtn" [disabled]="loginForm.invalid" (click)="login(loginForm)">Login</button>
+
+                <div *ngIf="showLoading" class="LoginBtn">
+                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                </div>
+              
+
                 <p class="ForgotPassword" (click)="forgotPassword()">Get help logging in.</p>
                 <p class="CreateAccount" (click)="openCreateAccount()"><span style="font-size: 12px;color: grey;">Dont have an account?</span> Create Account</p>
             </section>
@@ -41,7 +51,10 @@
             </section>
 
             <section class="InputHolder">
-                <button class="LoginBtn" [disabled]="registerForm.invalid" (click)="login(loginForm)">Create Account</button>
+                <button *ngIf="!showLoading" class="LoginBtn" [disabled]="registerForm.invalid" (click)="login(loginForm)">Create Account</button>
+                <div *ngIf="showLoading" class="LoginBtn">
+                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                </div>
                 <p style="margin-top: 10px;" class="CreateAccount" (click)="openLogin()"><span style="font-size: 12px;color: grey;">Already have an account?</span> Login</p>
             </section>
         </form>

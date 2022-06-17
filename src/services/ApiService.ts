@@ -13,12 +13,37 @@ export class ApiService {
     constructor(private http: HttpClient) {}
 
     async POST(Url:string,Req:any) {
-        let res = await this.http.post<any>(Url,Req).toPromise();
-        return res;
+        try{
+            let res2 = await this.http.post<any>(Url,Req).toPromise();
+            let res1 = {
+                StatusCode:"S",
+                StatusMessage:"Success"
+            }
+            return [res1,res2];
+        }catch(e){
+            let res1 = {
+                StatusCode:"F",
+                StatusMessage:e.message
+            }
+            return [res1];
+        }
     }
+    
     async GET(Url:string,Req:any) {
-        let res = await this.http.get<any>(Url,Req).toPromise();
-        return res;
+        try{
+            let res2 = await this.http.post<any>(Url,Req).toPromise();
+            let res1 = {
+                StatusCode:"S",
+                StatusMessage:"Success"
+            }
+            return [res1,res2];
+        }catch(e){
+            let res1 = {
+                StatusCode:"F",
+                StatusMessage:e.message
+            }
+            return [res1];
+        }
     }
 
     
