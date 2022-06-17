@@ -1,7 +1,7 @@
 <ion-content>
     <section *ngIf="showError" class="errorSection">
         <p class="errorMessage">{{errorMessage}}</p>
-        <p class="errorMessage">x</p>
+        <p class="errorMessage" (click)="showError=false">x</p>
     </section>
     <main>
         <p style="color: lightgray;margin: 0px;">Early Access</p>
