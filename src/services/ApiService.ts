@@ -14,34 +14,22 @@ export class ApiService {
 
     async POST(Url:string,Req:any) {
         try{
+            let res1 = { StatusCode:"S", StatusMessage:"Success" }
             let res2 = await this.http.post<any>(Url,Req).toPromise();
-            let res1 = {
-                StatusCode:"S",
-                StatusMessage:"Success"
-            }
             return [res1,res2];
         }catch(e){
-            let res1 = {
-                StatusCode:"F",
-                StatusMessage:e.message
-            }
+            let res1 = { StatusCode:"F", StatusMessage:e.message }
             return [res1];
         }
     }
-    
+
     async GET(Url:string,Req:any) {
         try{
+            let res1 = { StatusCode:"S", StatusMessage:"Success" }
             let res2 = await this.http.post<any>(Url,Req).toPromise();
-            let res1 = {
-                StatusCode:"S",
-                StatusMessage:"Success"
-            }
             return [res1,res2];
         }catch(e){
-            let res1 = {
-                StatusCode:"F",
-                StatusMessage:e.message
-            }
+            let res1 = { StatusCode:"F", StatusMessage:e.message }
             return [res1];
         }
     }
