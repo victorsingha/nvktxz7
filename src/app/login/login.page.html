@@ -1,9 +1,8 @@
 <ion-content>
     <main>
-        <p style="position: absolute;top: 0;right: 0;margin: 10px;color: lightgray;">Early Access</p>
-        <!-- <img src="https://fontmeme.com/permalink/220613/24e56598c43b19507834a1ea0f864e10.png" alt=""> -->
-        <img src="https://wallpapercrafter.com/th800/113164-anime-Naruto-Shippuuden-eyes-minimalism-simple-background-white-background-white-red-purple.png" alt="">
-        <img class="LoginImg" src="https://cdn.wallpapersafari.com/30/20/HpMvn6.jpg" alt="">
+        <p style="color: lightgray;">Early Access</p>
+        <h3 class="FiraSans" style="margin: 0px;font-size:30px;transform: translateY(15px);">Welcome to</h3>
+        <h1 class="FiraSans Logo" style="margin: 0px;font-size:110px;">Yyke!</h1>
         <form *ngIf="pageType == 'Login'" class="LoginForm" #loginForm="ngForm">
             <section class="InputHolder">
                 <label>Email</label>
@@ -23,7 +22,7 @@
             <section class="InputHolder">
                 <button class="LoginBtn" [disabled]="loginForm.invalid" (click)="login(loginForm)">Login</button>
                 <p class="ForgotPassword">Get help logging in.</p>
-                <p class="CreateAccount" (click)="openCreateAccount()"><span style="font-size: 12px;color: grey;">New Otaku?</span> Create Account</p>
+                <p class="CreateAccount" (click)="openCreateAccount()"><span style="font-size: 12px;color: grey;">Dont have an account?</span> Create Account</p>
             </section>
         </form>
 
