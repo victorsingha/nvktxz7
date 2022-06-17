@@ -21,7 +21,7 @@
 
             <section class="InputHolder">
                 <button class="LoginBtn" [disabled]="loginForm.invalid" (click)="login(loginForm)">Login</button>
-                <p class="ForgotPassword">Get help logging in.</p>
+                <p class="ForgotPassword" (click)="forgotPassword()">Get help logging in.</p>
                 <p class="CreateAccount" (click)="openCreateAccount()"><span style="font-size: 12px;color: grey;">Dont have an account?</span> Create Account</p>
             </section>
         </form>

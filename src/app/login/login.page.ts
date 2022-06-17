@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/services/apiService';
+import { Links } from 'src/services/Links';
 
 @Component({
   selector: 'app-login',
@@ -17,18 +19,30 @@ export class LoginPage implements OnInit {
   public newPassword="";
   public confirmPassword="";
 
-  constructor(private route:Router) { }
+  constructor(private route:Router,private links:Links,private API:ApiService) { }
 
   ngOnInit() {
   }
+  
 
-  login(loginForm:any){
-    if(loginForm.form.status == "INVALID"){
-      console.log("Invalid")
-    }else{
-      this.route.navigate(['/dashboard']);
+  async login(loginForm:any){
+    // console.log(this.links.baseURL)
+
+    // if(loginForm.form.status == "INVALID"){
+    //   console.log("Invalid")
+    // }else{
+    //   this.route.navigate(['/dashboard']);
+    // }
+    // console.log(loginForm)
+
+    console.log(this.email)
+    console.log(this.password)
+    let req = {
+      email:this.email,
+      password:this.password
     }
-    console.log(loginForm)
+    let res = await this.API.POST("http://localhost:3000/api/user/login",req)
+    console.log(res)
   }
 
   openCreateAccount(){
@@ -39,5 +53,9 @@ export class LoginPage implements OnInit {
   openLogin(){
     this.password = "";
     this.pageType = "Login"
+  }
+
+  forgotPassword(){
+    //Coming Soon
   }
 }
